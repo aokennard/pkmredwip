@@ -5,3 +5,7 @@ Q4 Project: Pokemon Red-Blue
 5/25/2016 - 6:30-7:00 : I search for the charger to my old Game Boy to play Pokemon Red again, to see what features it has and not have to go through the boring Google searches, and take an interactive route
 to making the game.
 
+5/27/2016 - 5:30-10:00 : Working on setting up some basic classes, such as Pokemon, Move, and using a "Bulbasaur", "Tackle" for examples for testing. I plan on further implementing all of the pokemon,
+moves, and then work from there.
+
+
