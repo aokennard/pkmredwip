@@ -49,10 +49,10 @@ public class Move
     double normal = 1;
     double higheffect = 2;
     double noeffect = 0;
-    double[][] typechart = new double[14][14];
-    for(int r = 0;r<=14;r++)
+    double[][] typechart = new double[15][15];
+    for(int r = 0;r<14;r++)
     {
-      for(int j = 0;j<=14;j++)
+      for(int j = 0;j<14;j++)
       {
         typechart[r][j] = normal;
       }
