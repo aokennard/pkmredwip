@@ -9,9 +9,10 @@ public class Pokemon
   protected int pokemonIDNum;
   protected String pokemonType;
   protected int pokemonCurrentLevel;
+  protected int pokemonCurrentXP;
   protected ArrayList<Move> pokemonMoves; //What moves a pokemon CURRENTLY has
   protected ArrayList<String> learnableDataset; //All possible learnable moves
-  public static String[] types = {"Normal","Fire","Water","Electric","Grass","Ice","Fighting", "Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon"};
+  public static String[] types = {"Normal","Fire","Water","Electric","Grass","Ice","Fighting", "Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Grass/Poison","Fire/Flying","Bug/Flying","Bug/Poison","Normal/Flying","Poison/Ground","Poison/Flying","Water/Fighting","Water/Poison","Rock/Ground","Water/Psychic","Bug/Grass","Water/Ice","Ghost/Poison","Grass/Psychic","Bug/Flying","Ice/Psychic","Water/Flying","Rock/Water","Ice/Flying","Electric/Flying","Dragon/Flying"};
   
   
   private int pokemonMaximumLevel = 100;
@@ -23,7 +24,7 @@ public class Pokemon
   }
   
   
-  public Pokemon(String name, double height, double weight, String desc, int idnum, String type, int currlevel,ArrayList<Move> set,ArrayList<String> learnableSet)
+  public Pokemon(String name, double height, double weight, String desc, int idnum, String type, int currlevel,ArrayList<Move> set,ArrayList<String> learnableSet, int currXP)
   {
     pokemonName = name;
     pokemonHeight = height;
@@ -34,6 +35,7 @@ public class Pokemon
     pokemonCurrentLevel = currlevel;
     pokemonMoves = set;
     learnableDataset = learnableSet;
+    pokemonCurrentXP = currXP;
   }
   public static int getParticularTypeIndex(String n)
   {
@@ -85,6 +87,10 @@ public class Pokemon
   public ArrayList<String> getLearnableMoves()
   {
     return learnableDataset;
+  }
+  public int getCurrentXP()
+  {
+    return pokemonCurrentXP;
   }
   
   

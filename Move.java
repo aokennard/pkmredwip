@@ -48,16 +48,18 @@ public class Move
     double loweffect= 0.5;
     double normal = 1;
     double higheffect = 2;
+    double veryhigheffect = 4;
     double noeffect = 0;
-    double[][] typechart = new double[15][15];
+    double veryloweffect = 0.25;
+    double[][] typechart = new double[15][37];
     for(int r = 0;r<14;r++)
     {
-      for(int j = 0;j<14;j++)
+      for(int j = 0;j<36;j++)
       {
         typechart[r][j] = normal;
       }
-    }
-    typechart[0][12] = loweffect;
+    } //row = attackers, colum = defender
+    typechart[0][12] = loweffect; //normal low on rock
     typechart[0][13] = noeffect;
     typechart[1][1] = loweffect;
     typechart[1][2] = loweffect;
@@ -139,6 +141,207 @@ public class Move
     typechart[13][13] = higheffect;
     typechart[14][14] = higheffect;
     
+    //-----Added Double-Types from Gen1
+    
+    typechart[1][15] = higheffect;
+    typechart[2][15] = loweffect;
+    typechart[3][15] = loweffect;
+    typechart[4][15] = veryloweffect;
+    typechart[5][15] = higheffect;
+    typechart[6][15] = loweffect;
+    typechart[9][15] = higheffect;
+    typechart[10][15] = higheffect;
+    typechart[1][16] = loweffect;
+    typechart[2][16] = higheffect;
+    typechart[3][16] = higheffect;
+    typechart[4][16] = veryloweffect;
+    typechart[6][16] = loweffect;
+    typechart[8][16] = noeffect;
+    typechart[11][16] = veryloweffect;
+    typechart[12][16] = veryhigheffect;
+    typechart[1][17] = higheffect;
+    typechart[3][17] = higheffect;
+    typechart[4][17] = veryloweffect;
+    typechart[6][17] = higheffect;
+    typechart[7][17] = veryloweffect;
+    typechart[9][17] = noeffect;
+    typechart[10][17] = higheffect;
+    typechart[12][17] = loweffect;
+    typechart[13][17] = veryhigheffect;
+    typechart[1][18] = higheffect;
+    typechart[4][18] = veryloweffect;
+    typechart[6][18] = veryloweffect;
+    typechart[7][18] = loweffect;
+    typechart[9][18] = higheffect;
+    typechart[10][18] = higheffect;
+    typechart[11][18] = loweffect;
+    typechart[12][18] = higheffect;
+    typechart[3][19] = higheffect;
+    typechart[4][19] = loweffect;
+    typechart[5][19] = higheffect;
+    typechart[8][19] = noeffect;
+    typechart[11][19] = loweffect;
+    typechart[12][19] = higheffect;
+    typechart[13][19] = noeffect;
+    typechart[2][20] = higheffect;
+    typechart[3][20] = noeffect;
+    typechart[5][20] = higheffect;
+    typechart[6][20] = loweffect;
+    typechart[7][20] = veryloweffect;
+    typechart[8][20] = higheffect;
+    typechart[10][20] = higheffect;
+    typechart[11][20] = loweffect;
+    typechart[12][20] = loweffect;
+    typechart[3][21] = higheffect;
+    typechart[4][21] = veryloweffect;
+    typechart[5][21] = higheffect;
+    typechart[6][21] = veryloweffect;
+    typechart[7][21] = loweffect;
+    typechart[8][21] = noeffect;
+    typechart[10][21] = higheffect;
+    typechart[11][21] = veryloweffect;
+    typechart[12][21] = higheffect;
+    typechart[1][22] = loweffect;
+    typechart[2][22] = loweffect;
+    typechart[3][22] = higheffect;
+    typechart[4][22] = higheffect;
+    typechart[5][22] = loweffect;
+    typechart[9][22] = higheffect;
+    typechart[10][22] = higheffect;
+    typechart[11][22] = loweffect;
+    typechart[12][22] = loweffect;
+    typechart[1][23] = loweffect;
+    typechart[2][23] = loweffect;
+    typechart[3][23] = higheffect;
+    typechart[5][23] = loweffect;
+    typechart[6][23] = loweffect;
+    typechart[7][23] = loweffect;
+    typechart[8][23] = higheffect;
+    typechart[10][23] = higheffect;
+    typechart[11][23] = loweffect;
+    typechart[0][24] = loweffect;
+    typechart[1][24] = loweffect;
+    typechart[2][24] = veryhigheffect;
+    typechart[3][24] = noeffect;
+    typechart[4][24] = veryhigheffect;
+    typechart[5][24] = higheffect;
+    typechart[6][24] = higheffect;
+    typechart[7][24] = veryloweffect;
+    typechart[8][24] = higheffect;
+    typechart[9][24] = loweffect;
+    typechart[12][24] = loweffect;
+    typechart[1][25] = loweffect;
+    typechart[2][25] = loweffect;
+    typechart[3][25] = higheffect;
+    typechart[4][25] = higheffect;
+    typechart[5][25] = loweffect;
+    typechart[6][25] = loweffect;
+    typechart[10][25] = loweffect;
+    typechart[11][25] = higheffect;
+    typechart[13][25] = higheffect;
+    typechart[1][26] = veryhigheffect;
+    typechart[2][26] = loweffect;
+    typechart[3][26] = loweffect;
+    typechart[4][26] = veryloweffect;
+    typechart[5][26] = higheffect;
+    typechart[6][26] = loweffect;
+    typechart[7][26] = higheffect;
+    typechart[8][26] = veryloweffect;
+    typechart[9][26] = veryhigheffect;
+    typechart[11][26] = higheffect;
+    typechart[12][26] = higheffect;
+    typechart[2][27] = loweffect;
+    typechart[3][27] = higheffect;
+    typechart[4][27] = higheffect;
+    typechart[5][27] = veryloweffect;
+    typechart[6][27] = higheffect;
+    typechart[12][27] = higheffect;
+    typechart[0][28] = noeffect;
+    typechart[4][28] = loweffect;
+    typechart[6][28] = noeffect;
+    typechart[7][28] = veryloweffect;
+    typechart[8][28] = higheffect;
+    typechart[10][28] = higheffect;
+    typechart[11][28] = veryloweffect;
+    typechart[13][28] = higheffect;
+    typechart[1][29] = higheffect;
+    typechart[2][29] = loweffect;
+    typechart[3][29] = loweffect;
+    typechart[4][29] = loweffect;
+    typechart[5][29] = higheffect;
+    typechart[6][29] = loweffect;
+    typechart[7][29] = higheffect;
+    typechart[8][29] = loweffect;
+    typechart[9][29] = higheffect;
+    typechart[10][29] = loweffect;
+    typechart[11][29] = veryhigheffect;
+    typechart[13][29] = higheffect;
+    typechart[1][30] = higheffect;
+    typechart[3][30] = higheffect;
+    typechart[4][30] = veryloweffect;
+    typechart[5][30] = higheffect;
+    typechart[6][30] = veryloweffect;
+    typechart[8][30] = noeffect;
+    typechart[9][30] = higheffect;
+    typechart[11][30] = loweffect;
+    typechart[12][30] = veryhigheffect;
+    typechart[1][31] = higheffect;
+    typechart[5][31] = loweffect;
+    typechart[10][31] = loweffect;
+    typechart[11][31] = higheffect;
+    typechart[12][31] = higheffect;
+    typechart[13][31] = higheffect;
+    typechart[1][32] = loweffect;
+    typechart[2][32] = loweffect;
+    typechart[3][32] = veryhigheffect;
+    typechart[6][32] = loweffect;
+    typechart[8][32] = noeffect;
+    typechart[11][32] = loweffect;
+    typechart[12][32] = higheffect;
+    typechart[0][33] = loweffect;
+    typechart[1][33] = veryloweffect;
+    typechart[3][33] = higheffect;
+    typechart[4][33] = veryhigheffect;
+    typechart[5][33] = loweffect;
+    typechart[6][33] = higheffect;
+    typechart[7][33] = loweffect;
+    typechart[8][33] = higheffect;
+    typechart[9][33] = loweffect;
+    typechart[1][34] = higheffect;
+    typechart[3][34] = higheffect;
+    typechart[4][34] = loweffect;
+    typechart[8][34] = noeffect;
+    typechart[11][34] = loweffect;
+    typechart[12][34] = veryhigheffect;
+    typechart[4][35] = loweffect;
+    typechart[5][35] = higheffect;
+    typechart[6][35] = loweffect;
+    typechart[8][35] = noeffect;
+    typechart[9][35] = loweffect;
+    typechart[11][35] = loweffect;
+    typechart[12][35] = higheffect;
+    typechart[1][36] = loweffect;
+    typechart[2][36] = loweffect;
+    typechart[4][36] = veryloweffect;
+    typechart[5][36] = veryhigheffect;
+    typechart[6][36] = loweffect;
+    typechart[8][36] = noeffect;
+    typechart[11][36] = loweffect;
+    typechart[12][36] = higheffect;
+    typechart[14][36] = higheffect;
+    //solid time usage
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     String mType = m.getMoveType();
     String pType = p.getType();
     int mIndex = Pokemon.getParticularTypeIndex(mType);
@@ -146,6 +349,15 @@ public class Move
     //String mT = Pokemon.getParticularType(mIndex);
     //String pT = Pokemon.getParticularType(pIndex);
     return typechart[mIndex][pIndex];
+  }
+  public static void main(String [] args)
+  {
+    ArrayList<Move> mB = new ArrayList<Move>();
+    Tackle t = new Tackle();
+    Move m = new Move("FireBlast",Pokemon.getParticularType(1), 5, .1, 10, "Physical");
+    mB.add(t);
+    Bulbasaur b = new Bulbasaur(5,mB);
+    System.out.print(determineTypeEfficiency(m,b));
   }
     
 }

@@ -8,4 +8,6 @@ to making the game.
 5/27/2016 - 5:30-10:00 : Working on setting up some basic classes, such as Pokemon, Move, and using a "Bulbasaur", "Tackle" for examples for testing. I plan on further implementing all of the pokemon,
 moves, and then work from there.
 
+5/28/2016 - 10:40-12:00 : Adding all variants of multi-type weaknesses.
+
 

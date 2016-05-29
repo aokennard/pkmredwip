@@ -35,7 +35,7 @@ public class Bulbasaur extends Pokemon
   }
   public Bulbasaur(int level,ArrayList<Move> moveset)
   {
-    super("Bulbasaur", 2.04, 15.2, "A strange seed was planted on its back at birth. The plant sprouts and grows with this pokemon.", 001, Pokemon.getParticularType(4) + Pokemon.getParticularType(7), level, moveset,bulbasaurMoves);
+    super("Bulbasaur", 2.04, 15.2, "A strange seed was planted on its back at birth. The plant sprouts and grows with this pokemon.", 001, Pokemon.getParticularType(15), level, moveset,bulbasaurMoves,0);
   }
   public static void main(String [] args)
   {
@@ -44,6 +44,7 @@ public class Bulbasaur extends Pokemon
     bulMoves.add(tackle);
     Bulbasaur starter = new Bulbasaur(5,bulMoves);
     System.out.println(starter.getMoves());
+    
   }
   
 }
