@@ -7,17 +7,23 @@ public class Move
   protected int movePower;
   protected double moveAccuracy;
   protected int movePP;
+  protected int moveLearnLevel;
   protected String moveCategory; //physical or special
   
-  public Move(String name,String type, int power, double accuracy, int PP, String category)
+  public Move(String name,String type, int power, double accuracy, int PP, int level, String category)
   {
     moveName = name;
     moveType = type;
     movePower = power;
     moveAccuracy = accuracy;
     movePP = PP;
+    moveLearnLevel = level;
     moveCategory = category;
     
+  }
+  public int getLearnLevel()
+  {
+    return moveLearnLevel;
   }
   public String getMoveCategory()
   {
@@ -350,14 +356,14 @@ public class Move
     //String pT = Pokemon.getParticularType(pIndex);
     return typechart[mIndex][pIndex];
   }
-  public static void main(String [] args)
+ /* public static void main(String [] args)
   {
     ArrayList<Move> mB = new ArrayList<Move>();
-    Tackle t = new Tackle();
+    Tackle t = new Tackle(1);
     Move m = new Move("FireBlast",Pokemon.getParticularType(1), 5, .1, 10, "Physical");
     mB.add(t);
     Bulbasaur b = new Bulbasaur(5,mB);
     System.out.print(determineTypeEfficiency(m,b));
-  }
+  } */
     
 }

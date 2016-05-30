@@ -3,10 +3,11 @@ import java.util.*;
 
 public class Bulbasaur extends Pokemon
 {
-  protected static ArrayList<String> bulbasaurMoves = new ArrayList<String>()
+  protected static Stats bulbaBaseStats = new Stats(45,49,49,65,45);
+  protected static ArrayList<Move> bulbasaurMoves = new ArrayList<Move>()
   {{
-    add("1-Tackle");
-    add("1-Growl");
+    add(new Tackle(1));
+   /* add("1-Growl");
     add("7-Leech Seed");
     add("13-Vine Whip");
     add("20-PoisonPowder");
@@ -27,22 +28,24 @@ public class Bulbasaur extends Pokemon
     add("TM-Bide");
     add("TM-Rest");
     add("TM-Substitute");
-    add("HM-Cut");
+    add("HM-Cut"); */
   }};
+  
   public Bulbasaur()
   {
     super("Bulbasaur");
   }
-  public Bulbasaur(int level,ArrayList<Move> moveset)
+  public Bulbasaur(int level,ArrayList<Move> moveset,Stats bulbaStats)
   {
-    super("Bulbasaur", 2.04, 15.2, "A strange seed was planted on its back at birth. The plant sprouts and grows with this pokemon.", 001, Pokemon.getParticularType(15), level, moveset,bulbasaurMoves,0);
+    super("Bulbasaur", 2.04, 15.2, "A strange seed was planted on its back at birth. The plant sprouts and grows with this pokemon.", 001, Pokemon.getParticularType(15), level, moveset,bulbasaurMoves,0,bulbaStats, bulbaBaseStats);
   }
   public static void main(String [] args)
   {
-    Move tackle = new Tackle();
+    Move tackle = new Tackle(1);
     ArrayList<Move> bulMoves = new ArrayList<Move>();
     bulMoves.add(tackle);
-    Bulbasaur starter = new Bulbasaur(5,bulMoves);
+    Stats bulS = new Stats(10,11,13,14,15);
+    Bulbasaur starter = new Bulbasaur(5,bulMoves,bulS);
     System.out.println(starter.getMoves());
     
   }
