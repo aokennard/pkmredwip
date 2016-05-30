@@ -11,7 +11,9 @@ public class Pokemon
   protected int pokemonCurrentLevel;
   protected int pokemonCurrentXP;
   protected ArrayList<Move> pokemonMoves; //What moves a pokemon CURRENTLY has
-  protected ArrayList<String> learnableDataset; //All possible learnable moves
+  protected ArrayList<Move> learnableDataset; //All possible learnable moves
+  protected Stats pokemonStats;
+  protected Stats pokemonBaseStats;
   public static String[] types = {"Normal","Fire","Water","Electric","Grass","Ice","Fighting", "Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Grass/Poison","Fire/Flying","Bug/Flying","Bug/Poison","Normal/Flying","Poison/Ground","Poison/Flying","Water/Fighting","Water/Poison","Rock/Ground","Water/Psychic","Bug/Grass","Water/Ice","Ghost/Poison","Grass/Psychic","Bug/Flying","Ice/Psychic","Water/Flying","Rock/Water","Ice/Flying","Electric/Flying","Dragon/Flying"};
   
   
@@ -24,7 +26,7 @@ public class Pokemon
   }
   
   
-  public Pokemon(String name, double height, double weight, String desc, int idnum, String type, int currlevel,ArrayList<Move> set,ArrayList<String> learnableSet, int currXP)
+  public Pokemon(String name, double height, double weight, String desc, int idnum, String type, int currlevel,ArrayList<Move> set,ArrayList<Move> learnableSet, int currXP, Stats currstats, Stats basestats)
   {
     pokemonName = name;
     pokemonHeight = height;
@@ -36,6 +38,8 @@ public class Pokemon
     pokemonMoves = set;
     learnableDataset = learnableSet;
     pokemonCurrentXP = currXP;
+    pokemonStats = currstats;
+    pokemonBaseStats = basestats;
   }
   public static int getParticularTypeIndex(String n)
   {
@@ -84,13 +88,21 @@ public class Pokemon
   {
     return pokemonCurrentLevel;
   }
-  public ArrayList<String> getLearnableMoves()
+  public ArrayList<Move> getLearnableMoves()
   {
     return learnableDataset;
   }
   public int getCurrentXP()
   {
     return pokemonCurrentXP;
+  }
+  public Stats getPokemonStats()
+  {
+    return pokemonStats;
+  }
+  public Stats getBasePkmnStats()
+  {
+    return pokemonBaseStats;
   }
   
   

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<drjava version="drjava-20140826-r5761">
+  <project autorefresh="false" build="" root="" work="">
+    <createjar file=""/>
+    <source>
+      <file active="true" name="Move.java" package="" timestamp="29-May-2016 20:53:15">
+        <select from="11275" to="11275"/>
+        <scroll column="1656" row="0"/>
+      </file>
+      <file name="Pokemon.java" package="" timestamp="29-May-2016 18:19:16">
+        <select from="11275" to="11275"/>
+        <scroll column="1656" row="0"/>
+      </file>
+      <file name="Bulbasaur.java" package="" timestamp="29-May-2016 18:24:01">
+        <select from="11275" to="11275"/>
+        <scroll column="1656" row="0"/>
+      </file>
+      <file name="Stats.java" package="" timestamp="29-May-2016 17:58:17">
+        <select from="11275" to="11275"/>
+        <scroll column="1656" row="0"/>
+      </file>
+      <file name="Tackle.java" package="" timestamp="29-May-2016 18:08:54">
+        <select from="11275" to="11275"/>
+        <scroll column="1656" row="0"/>
+      </file>
+    </source>
+    <included/>
+    <excluded/>
+    <collapsed/>
+    <classpath/>
+    <breakpoints/>
+    <watches/>
+    <bookmarks/>
+    <preferences/>
+  </project>
+</drjava>

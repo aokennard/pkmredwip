@@ -52,9 +52,9 @@ public class Pokemon
     }
     return -1;
   }
-  public static String getParticularType(int index)
+  public static String getParticularType(String s)
   {
-    return types[index];
+    return types[getParticularTypeIndex(s)];
   }
   public ArrayList<Move> getMoves()
   {

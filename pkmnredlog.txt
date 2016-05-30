@@ -10,4 +10,5 @@ moves, and then work from there.
 
 5/28/2016 - 10:40-12:00 : Adding all variants of multi-type weaknesses.
 
+5/29/2016 - 11:00-11:50 : Started adding Moves as functions, got up to C's. Fixed error of making a function that inputted String s to return string s....
 
