@@ -466,6 +466,7 @@ public class Move
   {
     return new Move("Cut","Normal",50,.95,30,level,"Physical");
   }
+  //begin the d's
   
   
   

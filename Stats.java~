@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class Stats
 {
   protected int healthStat;
@@ -16,7 +14,7 @@ public class Stats
     speedStat = speed;
     specialStat = spec;
   }
-  protected static ArrayList<Stats> allBaseStats = new ArrayList<Stats>()
+  protected ArrayList<Stats> allBaseStats = new ArrayList<Stats>();
   {{
     add(new Stats(45,49,49,45,65)); //bulbasaur
     add(new Stats(60,62,63,60,80));
@@ -50,27 +48,6 @@ public class Stats
     add(new Stats(70,62,67,56,55));
     add(new Stats(90, 82, 87, 76, 75));
     add(new Stats(46,57,40,50,40));
-    add(new Stats(61,72,57,65,55)); //nidoran
-    add(new Stats(81,92,77,85,75));
-    add(new Stats(70,45,48,35,60));
-    add(new Stats(95,70,73,60,85));
-    add(new Stats(38,41,40,65,65));
-    add(new Stats(73,76,75,100,100));
-    add(new Stats(115,45,20,20,25));
-    add(new Stats(140,70,45,45,50));
-    add(new Stats(40,45,35,55,40));
-    add(new Stats(75,80,70,90,75));
-    add(new Stats(45,50,55,30,75));
-    add(new Stats(60,65,70,40,85));
-    add(new Stats(75,80,85,50,100));
-    add(new Stats(35,70,55,25,55));
-    add(new Stats(60,95,80,30,80));
-    add(new Stats(60,55,50,45,40));
-    add(new Stats(70,65,60,90,90));
-    add(new Stats(10,55,25,95,45));
-    add(new Stats(35,80,50,120,70));
-    
-  }};
     
     
     

@@ -357,12 +357,125 @@ public class Move
     return typechart[mIndex][pIndex];
   }
   
-  public static Move tac
+  public static Move tackle(int level)
+  {
+    return new Move("Tackle",Pokemon.getParticularType("Normal"), 35, 0.95, 35,level,"Physical"); //no effect
+  }
+  public static Move absorb(int level)
+  {
+    return new Move("Absorb",Pokemon.getParticularType("Grass"), 20, 1, 25, level, "Special"); 
+  }
+  public static Move acid(int level)
+  {
+    return new Move("Acid",Pokemon.getParticularType("Poison"), 40, 1, 30, level, "Special"); 
+  }
+  public static Move acidArmor(int level)
+  {
+    return new Move("Acid Armor",Pokemon.getParticularType("Poison"), 0, 1, 20, level, "Status");
+  }
+  public static Move agility(int level)
+  {
+    return new Move("Agility", Pokemon.getParticularType("Psychic"),0,1,30,level, "Status"); 
+  }
+  public static Move amnesia(int level)
+  {
+    return new Move("Amnesia", Pokemon.getParticularType("Psychic"),0,1,20,level,"Status"); 
+  }
+  public static Move auroraBeam(int level)
+  {
+    return new Move("Aurora Beam", Pokemon.getParticularType("Ice"),65,1,20,level,"Special"); 
+  }
+  public static Move barrage(int level)
+  {
+    return new Move("Barrage",Pokemon.getParticularType("Normal"),15,85,20,level,"Physical");
+  }
+  public static Move barrier(int level)
+  {
+    return new Move("Barrier",Pokemon.getParticularType("Psychic"),0,1,20,level,"Status");
+  }
+  public static Move bide(int level)
+  {
+    return new Move("Bide",Pokemon.getParticularType("Normal"),0,1,10,level,"Physical");
+  }
+  public static Move bind(int level)
+  {
+    return new Move("Bind",Pokemon.getParticularType("Normal"),15,.85,20,level,"Physical");
+  }
+  public static Move bite(int level)
+  {
+    return new Move("Bite",Pokemon.getParticularType("Normal"),60,1,25,level,"Physical");
+  }
+  public static Move blizzard(int level)
+  {
+    return new Move("Blizzard",Pokemon.getParticularType("Ice"),110,.7,5,level,"Special");
+  }
+  public static Move bodySlam(int level)
+  {
+    return new Move("Body Slam",Pokemon.getParticularType("Normal"),85,1,15,level,"Physical");
+  }
+  public static Move boneClub(int level)
+  {
+    return new Move("Bone Club",Pokemon.getParticularType("Ground"),65,.85,20,level,"Physical");
+  }
+  //this is the point where i realized my error.
+  public static Move bonemerang(int level)
+  {
+    return new Move("Bonemerang","Ground",50,.9,10,level,"Physical");
+  }
+  public static Move bubble(int level)
+  {
+    return new Move("Bubble","Water",40,1,30,level,"Special");
+  }
+  public static Move bubbleBeam(int level)
+  {
+    return new Move("BubbleBeam","Water",65,1,20,level,"Special");
+  }
+  public static Move clamp(int level)
+  {
+    return new Move("Clamp","Water",35,.85,10,level,"Physical");
+  }
+  public static Move cometPunch(int level)
+  {
+    return new Move("Comet Punch","Normal",18,.85,15,level,"Physical");
+  }
+  public static Move confuseRay(int level)
+  {
+    return new Move("Confuse Ray","Ghost",0,1,10,level,"Status");
+  }
+  public static Move confusion(int level)
+  {
+    return new Move("Confusion","Psychic",50,1,25,level,"Special");
+  }
+  public static Move constrict(int level)
+  {
+    return new Move("Constrict","Normal",10,1,35,level,"Physical");
+  }
+  public static Move conversion(int level)
+  {
+    return new Move("Conversion","Normal",0,1,30,level,"Status");
+  }
+  public static Move counter(int level)
+  {
+    return new Move("Counter","Fighting",0,1,20,level,"Physical");
+  }
+  public static Move crabHammer(int level)
+  {
+    return new Move("Crab Hammer","Water", 100, .9, 10, level, "Physical");
+  }
+  public static Move cut(int level)
+  {
+    return new Move("Cut","Normal",50,.95,30,level,"Physical");
+  }
+  
+  
+  
+  
+  
   public static void main(String [] args)
   {
     ArrayList<Move> mB = new ArrayList<Move>();
     Tackle t = new Tackle(1);
-    Move m = new Move("FireBlast",Pokemon.getParticularType(1), 95, .1, 5, 10, "Physical");
+    Move m = new Move("FireBlast",Pokemon.getParticularType("Fire"), 95, .1, 5, 10, "Physical");
     mB.add(t);
     Bulbasaur b = new Bulbasaur(5,mB,Bulbasaur.bulbaBaseStats);
     System.out.print(determineTypeEfficiency(m,b));
