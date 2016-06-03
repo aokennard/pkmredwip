@@ -1,0 +1,21 @@
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+public class jsouptest {
+
+    public static void main(String[] args) throws Exception {
+        String url = "http://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_base_stats_(Generation_I)";
+        Document document = Jsoup.connect(url).get();
+
+        String stat = document.select("div").first().text(); 
+        System.out.println("Stats:" + stat);
+
+        Elements answerers = document.select("tr#center"); //div class user-details
+        for (Element answerer : answerers) {
+            System.out.println("Answerer: " + answerer.text());
+        }
+    }
+
+} //http://stackoverflow.com/questions/30154023/web-scraping-with-jsoup
