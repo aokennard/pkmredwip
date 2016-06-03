@@ -1,8 +1,4 @@
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
+import java.util.*;
 public class jsouptest {
 
   
@@ -21,14 +17,26 @@ public class jsouptest {
     
     
     
-    public static void convertToArray(String s)
+    public static Stats convertToArray(String s)
     {
       
-      int indexS = basestats.indexOf(s);
+      
       String[] arr = basestats.split(" ");
-      int ind = index(arr,s);
-      System.out.println(ind);
+      int indexS = index(arr,s);
+      int indexHP = Integer.parseInt(arr[indexS+1]);
+      int indexA = Integer.parseInt(arr[indexS+2]);
+      int indexD = Integer.parseInt(arr[indexS+3]);
+      int indexSpeed = Integer.parseInt(arr[indexS+4]);
+      int indexSpc = Integer.parseInt(arr[indexS+5]);
+      return new Stats(indexHP,indexA,indexD,indexSpeed,indexSpc);
     }
-    
+    public static void main(String[] args)
+    {
+      System.out.print(convertToArray("Bulbasaur").getHP());
+      System.out.print(convertToArray("Bulbasaur").getAttack());
+      System.out.print(convertToArray("Bulbasaur").getDefense());
+      System.out.print(convertToArray("Bulbasaur").getSpeed());
+      System.out.print(convertToArray("Bulbasaur").getSpecial());
+    }
 
 } //http://stackoverflow.com/questions/30154023/web-scraping-with-jsoup
