@@ -1,9 +1,9 @@
 import java.util.*;
 
 
-public class Bulbasaur extends Pokemon
+public class Ivysaur extends Pokemon
 {
-  protected static ArrayList<Move> bulbasaurMoves = new ArrayList<Move>()
+  protected static ArrayList<Move> ivysaurMoves = new ArrayList<Move>()
   {{
     add(Move.tackle(1));
    /* add("1-Growl");
@@ -30,13 +30,13 @@ public class Bulbasaur extends Pokemon
     add("HM-Cut"); */
   }};
   
-  public Bulbasaur()
+  public Ivysaur()
   {
-    super("Bulbasaur");
+    super("Ivysaur");
   }
-  public Bulbasaur(int level,ArrayList<Move> moveset,Stats bulbaStats)
+  public Ivysaur(int level,ArrayList<Move> moveset,Stats ivyStats)
   {
-    super("Bulbasaur", 2.04, 15.2, "A strange seed was planted on its back at birth. The plant sprouts and grows with this pokemon.", 001, Pokemon.getParticularType("Grass/Poison"), level, moveset,bulbasaurMoves,0,bulbaStats, Stats.getPokemonStat("Bulbasaur"));
+    super("Ivysaur", 3.03, 27.8, "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.", 002, Pokemon.getParticularType("Grass/Poison"), level, moveset,ivysaurMoves,0,ivyStats, Stats.getPokemonStat("Ivysaur"));
   }
   public static void main(String [] args)
   {

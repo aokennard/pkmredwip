@@ -6,7 +6,7 @@ public class Bulbasaur extends Pokemon
   protected static Stats bulbaBaseStats = new Stats(45,49,49,65,45);
   protected static ArrayList<Move> bulbasaurMoves = new ArrayList<Move>()
   {{
-    add(new Tackle(1));
+    add(Move.tackle(1));
    /* add("1-Growl");
     add("7-Leech Seed");
     add("13-Vine Whip");
@@ -41,7 +41,7 @@ public class Bulbasaur extends Pokemon
   }
   public static void main(String [] args)
   {
-    Move tackle = new Tackle(1);
+    Move tackle = Move.tackle(1);
     ArrayList<Move> bulMoves = new ArrayList<Move>();
     bulMoves.add(tackle);
     Stats bulS = new Stats(10,11,13,14,15);
