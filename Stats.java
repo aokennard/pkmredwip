@@ -39,18 +39,7 @@ public class Stats
       int indexSpeed = Integer.parseInt(arr[indexS+4]);
       int indexSpc = Integer.parseInt(arr[indexS+5]);
       return new Stats(indexHP,indexA,indexD,indexSpeed,indexSpc);
-    }
-
-  protected static ArrayList<Stats> allBaseStats = new ArrayList<Stats>()
-  {{
-    for(int i = 1;i<152;i++)
-    {
-      add(getPokemonStat(Pokemon.allPokemon[i]));
-    }
-  }};
-    
-    
-  
+  }  
   public int getHP()
   {
     return healthStat;
@@ -73,7 +62,7 @@ public class Stats
   }
   public static void main(String[] args)
   {
-    System.out.println(getPokemonStat("Bulbasaur"));
+    
   }
 }
     

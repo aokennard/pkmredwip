@@ -494,6 +494,19 @@ public class Move
   {
     return new Move("Double Team","Normal",0,1,15,level,"Status");
   }
+  public static Move doubleEdge(int level)
+  {
+    return new Move("Double Edge","Normal",120,1,15,level,"Physical");
+  }
+  public static Move dragonRage(int level)
+  {
+    return new Move("Dragon Rage","Dragon",0,1,10,level,"Special");
+  }
+  public static Move dreamEater(int level)
+  {
+    return new Move("Dream Eater","Psychic",100,1,15,level,"Special");
+  }
+  
   
   
   
