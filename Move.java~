@@ -466,7 +466,35 @@ public class Move
   {
     return new Move("Cut","Normal",50,.95,30,level,"Physical");
   }
-  //begin the d's
+  public static Move defenseCurl(int level)
+  {
+    return new Move("Defense Curl","Normal",0,1,40,level,"Status");
+  }
+  public static Move dig(int level)
+  {
+    return new Move("Dig","Ground",100,1,10,level,"Physical");
+  }
+  public static Move disable(int level)
+  {
+    return new Move("Disable","Normal",0,.55,20,level,"Status");
+  }
+  public static Move dizzyPunch(int level)
+  {
+    return new Move("Dizzy Punch","Normal",70,1,10,level,"Physical");
+  }
+  public static Move doubleKick(int level)
+  {
+    return new Move("Double Kick","Fighting",30,1,30,level,"Physical");
+  }
+  public static Move doubleSlap(int level)
+  {
+    return new Move("Double Slap","Normal",15,.85,10,level,"Physical");
+  }
+  public static Move doubleTeam(int level)
+  {
+    return new Move("Double Team","Normal",0,1,15,level,"Status");
+  }
+  
   
   
   

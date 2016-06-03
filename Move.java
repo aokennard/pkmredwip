@@ -503,7 +503,7 @@ public class Move
   public static void main(String [] args)
   {
     ArrayList<Move> mB = new ArrayList<Move>();
-    Tackle t = new Tackle(1);
+    Move t = Move.tackle(1);
     Move m = new Move("FireBlast",Pokemon.getParticularType("Fire"), 95, .1, 5, 10, "Physical");
     mB.add(t);
     Bulbasaur b = new Bulbasaur(5,mB,Bulbasaur.bulbaBaseStats);
