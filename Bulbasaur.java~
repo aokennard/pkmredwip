@@ -3,7 +3,6 @@ import java.util.*;
 
 public class Bulbasaur extends Pokemon
 {
-  protected static Stats bulbaBaseStats = new Stats(45,49,49,65,45);
   protected static ArrayList<Move> bulbasaurMoves = new ArrayList<Move>()
   {{
     add(Move.tackle(1));
@@ -37,7 +36,7 @@ public class Bulbasaur extends Pokemon
   }
   public Bulbasaur(int level,ArrayList<Move> moveset,Stats bulbaStats)
   {
-    super("Bulbasaur", 2.04, 15.2, "A strange seed was planted on its back at birth. The plant sprouts and grows with this pokemon.", 001, Pokemon.getParticularType("Grass/Poison"), level, moveset,bulbasaurMoves,0,bulbaStats, bulbaBaseStats);
+    super("Bulbasaur", 2.04, 15.2, "A strange seed was planted on its back at birth. The plant sprouts and grows with this pokemon.", 001, Pokemon.getParticularType("Grass/Poison"), level, moveset,bulbasaurMoves,0,bulbaStats, Stats.getPokemonStat("Bulbasaur"));
   }
   public static void main(String [] args)
   {
