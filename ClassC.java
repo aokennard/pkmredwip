@@ -4,6 +4,11 @@ import java.util.*;
 
 public class ClassC
 {
+  //"http://bulbapedia.bulbagarden.net/wiki/"+pokemonName+"_(Pok%C3%A9mon)/Generation_I_learnset#By_leveling_up"
+  //"http://bulbapedia.bulbagarden.net/wiki/"+pokemonName+"_(Pok%C3%A9mon)"
+  //public static ArrayList<String> getPokemonMoveset (String pokemonName)
+  //{
+    
 
   //Have html parser return string list in "add(Move."+mvname+"("+mvlvl+));"
   public static String createPkmClass(String name,ArrayList<String> moves,double height,double weight,String description,int pkmid,String pkmtype)
