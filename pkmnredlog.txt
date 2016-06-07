@@ -3,12 +3,21 @@ Q4 Project: Pokemon Red-Blue
 *disclaimer: you asked for a long-term project*
 
 5/25/2016 - 6:30-7:00 : I search for the charger to my old Game Boy to play Pokemon Red again, to see what features it has and not have to go through the boring Google searches, and take an interactive route
-to making the game.
+to making the game. 30min
 
 5/27/2016 - 5:30-10:00 : Working on setting up some basic classes, such as Pokemon, Move, and using a "Bulbasaur", "Tackle" for examples for testing. I plan on further implementing all of the pokemon,
-moves, and then work from there.
+moves, and then work from there. 4.5 hr
 
-5/28/2016 - 10:40-12:00 : Adding all variants of multi-type weaknesses.
+5/28/2016 - 10:40-12:00 : Adding all variants of multi-type weaknesses. 1.33hr
 
-5/29/2016 - 11:00-11:50 : Started adding Moves as functions, got up to C's. Fixed error of making a function that inputted String s to return string s....
+5/29/2016 - 11:00-11:50 : Started adding Moves as functions, got up to C's. Fixed error of making a function that inputted String s to return string s.. 50min
 
+5/30/2016 - 6:30-8:30 : Worked on getting base stats via jsoup, an html parser. I eventually obtained it, though I don't know much about HTML. Using Inspect Element ft. Chrome was useful 2hr
+
+6/1/2016 - 5:30-6:30 : Added more moves, added Ivysaur class to test a bit more. 1hr
+
+6/3/2016 - 6:00-7:00 : Added stats class and the base stats to the class as a var, made constructor and started scheming on how to it should work with the other classes 1hr
+
+6/6/2016 - 8:00-8:50 : Added base for class creator class so I don't have to make 151 pokemon classes by hand 50 mins
+
+Total hours : 12hrs 
