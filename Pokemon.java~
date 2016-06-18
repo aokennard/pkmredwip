@@ -15,7 +15,8 @@ public class Pokemon
   protected Stats pokemonStats;
   protected Stats pokemonBaseStats;
   public static String[] types = {"Normal","Fire","Water","Electric","Grass","Ice","Fighting", "Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Grass/Poison","Fire/Flying","Bug/Flying","Bug/Poison","Normal/Flying","Poison/Ground","Poison/Flying","Water/Fighting","Water/Poison","Rock/Ground","Water/Psychic","Bug/Grass","Water/Ice","Ghost/Poison","Grass/Psychic","Bug/Flying","Ice/Psychic","Water/Flying","Rock/Water","Ice/Flying","Electric/Flying","Dragon/Flying"};
-  
+  public static String pokemonString = Stats.basestats.replaceAll("[0-9]","");
+  public static String[] allPokemon = pokemonString.split(" ");
   
   private int pokemonMaximumLevel = 100;
   private int pokemonMaximumMoves = 4;

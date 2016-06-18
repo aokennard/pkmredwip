@@ -4,13 +4,17 @@ import java.util.*;
 
 public class ClassC
 {
-  //"http://bulbapedia.bulbagarden.net/wiki/"+pokemonName+"_(Pok%C3%A9mon)/Generation_I_learnset#By_leveling_up"
-  //"http://bulbapedia.bulbagarden.net/wiki/"+pokemonName+"_(Pok%C3%A9mon)"
-  //public static ArrayList<String> getPokemonMoveset (String pokemonName)
-  //{
-    
-
-  //Have html parser return string list in "add(Move."+mvname+"("+mvlvl+));"
+  /*
+   moveset string - "http://bulbapedia.bulbagarden.net/wiki/"+pokemonName+"_(Pok%C3%A9mon)/Generation_I_learnset#By_leveling_up"
+   pokemon string - "http://bulbapedia.bulbagarden.net/wiki/"+pokemonName+"_(Pok%C3%A9mon)"
+   public static ArrayList<String> getPokemonMoveset (String pokemonName)
+   {
+   for loop thru site, make temp vars mvname, mvlvl.
+   }
+   Have html parser return string list in "add(Move."+mvname+"("+mvlvl+"));" 
+  */
+  
+  
   public static String createPkmClass(String name,ArrayList<String> moves,double height,double weight,String description,int pkmid,String pkmtype)
   {
     String movestring = "";
@@ -19,10 +23,10 @@ public class ClassC
       movestring += moves.get(i)+ " ";
     }
     return "import java.util.*; " + "public class " + name + " extends Pokemon { " +
-  "protected static ArrayList<Move> "+name+"Moves = new ArrayList<Move>(); {{" +
-      movestring + "}};" + "public "+name+"()"+ " { super("+name+"); }"
+  "protected static ArrayList<Move> "+name+"Moves = new ArrayList<Move>() {{" +
+      movestring + "}};" + "public "+name+"()"+ " { super("+"\""+name+"\""+"); }"
       + "public "+name+"(int level,ArrayList<Move> moveset,Stats "+name+"Stats,int xp) { " + 
-    "super("+name+","+height+", "+weight+", "+description+", "+pkmid+", Pokemon.getParticularType("+pkmtype+"), level, moveset,"+name+"Moves,xp,"+name+"Stats, Stats.getPokemonStat("+name+"));"+
+    "super("+"\""+name+"\""+","+height+", "+weight+", "+"\""+description+"\""+", "+pkmid+", Pokemon.getParticularType("+"\""+pkmtype+"\""+"), level, moveset,"+name+"Moves,xp,"+name+"Stats, Stats.getPokemonStat("+"\""+name+"\""+"));"+
     " } " + " public static void main(String [] args)" + " { } " + " } ";
   }
 }
