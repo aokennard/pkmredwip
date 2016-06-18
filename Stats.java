@@ -30,6 +30,7 @@ public class Stats
       }
       return -1;
   } 
+  //Returns Stats object for a pokemon s
   public static Stats getPokemonStat(String s)
   {
       String[] arr = basestats.split(" ");

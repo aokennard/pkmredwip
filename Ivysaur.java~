@@ -41,12 +41,7 @@ public class Ivysaur extends Pokemon
   }
   public static void main(String [] args)
   {
-    Move tackle = Move.tackle(1);
-    ArrayList<Move> bulMoves = new ArrayList<Move>();
-    bulMoves.add(tackle);
-    Stats bulS = new Stats(10,11,13,14,15);
-    Bulbasaur starter = new Bulbasaur(5,bulMoves,bulS);
-    System.out.println(starter.getMoves());
+   
     
   }
   

@@ -7,7 +7,7 @@ public class Move
   protected int movePower;
   protected double moveAccuracy;
   protected int movePP;
-  protected int moveLearnLevel;
+  protected int moveLearnLevel; //0 = HM/TM, else is level move is learned at
   protected String moveCategory; //physical or special
   
   public Move(String name,String type, int power, double accuracy, int PP, int level, String category)

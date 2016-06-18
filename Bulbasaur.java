@@ -6,28 +6,7 @@ public class Bulbasaur extends Pokemon
   protected static ArrayList<Move> bulbasaurMoves = new ArrayList<Move>()
   {{
     add(Move.tackle(1));
-   /* add(Move.growl(1));
-    add("7-Leech Seed");
-    add("13-Vine Whip");
-    add("20-PoisonPowder");
-    add("27-Razor Leaf");
-    add("34-Growth");
-    add("41-Sleep Powder");
-    add("48-SolarBeam");
-    add("TM-Swords Dance");
-    add("TM-Toxic");
-    add("TM-Body Slam");
-    add("TM-Take Down");
-    add("TM-Double-Edge");
-    add("TM-Rage");
-    add("TM-Mega Drain");
-    add("TM-Mimic");
-    add("TM-Double Team");
-    add("TM-Reflect");
-    add("TM-Bide");
-    add("TM-Rest");
-    add("TM-Substitute");
-    add("HM-Cut"); */
+   
   }};
   
   public Bulbasaur()

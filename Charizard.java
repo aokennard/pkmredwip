@@ -3,7 +3,7 @@ public class Charizard extends Pokemon {
   protected static ArrayList<Move> CharizardMoves = new ArrayList<Move>() 
   {{
     add(Move.tackle(1)); 
-    //add(Move.wingAttack(36)); 
+    
   }};
   public Charizard() 
   { 
