@@ -26,9 +26,12 @@ public class ClassC
  
   public static ArrayList<String> getPokemonMoveset (String pokemonName)
    {
-   for loop thru site, make temp vars mvname, mvlvl.
+     String website = "http://bulbapedia.bulbagarden.net/wiki/"+pokemonName+"_(Pok%C3%A9mon)/Generation_I_learnset#By_leveling_up";
+     
+   for loop through website's tables, make temp vars mvname, mvlvl.
+   Have function return strings in a list of format "add(Move."+mvname+"("+mvlvl+"));"
    }
-   Have html parser return string list in "add(Move."+mvname+"("+mvlvl+"));" 
+   
   */
   
   
