@@ -7,7 +7,7 @@ public class Move
   protected int movePower;
   protected double moveAccuracy;
   protected int movePP;
-  protected int moveLearnLevel;
+  protected int moveLearnLevel; //0 = HM/TM, else is level move is learned at
   protected String moveCategory; //physical or special
   
   public Move(String name,String type, int power, double accuracy, int PP, int level, String category)
@@ -49,6 +49,7 @@ public class Move
   {
     return movePP;
   }
+  //the cringe function
   public static double determineTypeEfficiency(Move m, Pokemon p)
   {
     double loweffect= 0.5;
@@ -335,28 +336,14 @@ public class Move
     typechart[11][36] = loweffect;
     typechart[12][36] = higheffect;
     typechart[14][36] = higheffect;
-    //solid time usage
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     String mType = m.getMoveType();
     String pType = p.getType();
     int mIndex = Pokemon.getParticularTypeIndex(mType);
     int pIndex = Pokemon.getParticularTypeIndex(pType);
-    //String mT = Pokemon.getParticularType(mIndex);
-    //String pT = Pokemon.getParticularType(pIndex);
     return typechart[mIndex][pIndex];
   }
-  
+  //I'll eventually get around to making a move-creator function.
   public static Move tackle(int level)
   {
     return new Move("Tackle",Pokemon.getParticularType("Normal"), 35, 0.95, 35,level,"Physical"); //no effect
@@ -417,7 +404,6 @@ public class Move
   {
     return new Move("Bone Club",Pokemon.getParticularType("Ground"),65,.85,20,level,"Physical");
   }
-  //this is the point where i realized my error.
   public static Move bonemerang(int level)
   {
     return new Move("Bonemerang","Ground",50,.9,10,level,"Physical");
@@ -507,10 +493,7 @@ public class Move
     return new Move("Dream Eater","Psychic",100,1,15,level,"Special");
   }
   
-  
-  
-  
-  
+
   
   
   public static void main(String [] args)
