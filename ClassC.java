@@ -9,7 +9,7 @@ import org.jsoup.select.Elements;
 
 public class ClassC
 {
-<<<<<<< HEAD
+
   //"http://bulbapedia.bulbagarden.net/wiki/"+pokemonName+"_(Pok%C3%A9mon)/Generation_I_learnset#By_leveling_up"
   //"http://bulbapedia.bulbagarden.net/wiki/"+pokemonName+"_(Pok%C3%A9mon)"
   public static ArrayList<String> getPokemonMoveset (String pokemonName) throws Exception
@@ -32,14 +32,14 @@ public class ClassC
     (lvl1:ignore 01)
     (attackdmg35: ignore 035)
     (accuracy95: ignore 095}}
-    
-  
-  public static ArrayList<String> getPokemonData (String pokemonName) throws Exception
+   */ 
+  //Go with Inches
+  public static String getPokemonHeight (String pokemonName) throws Exception
   {
     ArrayList<String> data = new ArrayList<String>();
     String url = "http://bulbapedia.bulbagarden.net/wiki/"+pokemonName+"_(Pok%C3%A9mon)";
         Document doc = Jsoup.connect(url).get();
-    for (Element table : doc.select("div#mw-content-text")) 
+    for (Element table : doc.select("td:contains(Height)")) 
     {
         for (Element row : table.select("tr")) 
         {
@@ -47,13 +47,13 @@ public class ClassC
             data.add(td.text());
         }
     }
-    return data;
+    return data.get(0);
   }
 
     
-*/
+
   //Have html parser return string list in "add(Move."+mvname+"("+mvlvl+));"
-=======
+
   
   /*
    * This class is intended to create all 151 pokemon red classes by obtaining info from bulbapedia, via JSoup.
@@ -85,7 +85,6 @@ public class ClassC
   */
   
   
->>>>>>> ba0eaad38da9071110089cf116ac8f6ddd70239b
   public static String createPkmClass(String name,ArrayList<String> moves,double height,double weight,String description,int pkmid,String pkmtype)
   {
     String movestring = "";
