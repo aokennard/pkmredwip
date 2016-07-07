@@ -6,16 +6,16 @@ public class Bulbasaur extends Pokemon
   protected static ArrayList<Move> bulbasaurMoves = new ArrayList<Move>()
   {{
     add(Move.tackle(1));
-   
   }};
   
   public Bulbasaur()
   {
     super("Bulbasaur");
   }
-  public Bulbasaur(int level,ArrayList<Move> moveset,Stats bulbaStats,int xp)
+  
+  public Bulbasaur(int level,ArrayList<Move> moveset,Stats bulbaStats,int xp, String gender)
   {
-    super("Bulbasaur", 2.04, 15.2, "A strange seed was planted on its back at birth. The plant sprouts and grows with this pokemon.", 001, Pokemon.getParticularType("Grass/Poison"), level, moveset,bulbasaurMoves,xp,bulbaStats, Stats.getPokemonStat("Bulbasaur"));
+    super("Bulbasaur", 2.04, 15.2, "A strange seed was planted on its back at birth. The plant sprouts and grows with this pokemon.", 001, Pokemon.getParticularType("Grass/Poison"), level, moveset,bulbasaurMoves,xp,bulbaStats, Stats.getPokemonStat("Bulbasaur"),.875,gender);
   }
   public static void main(String [] args)
   {

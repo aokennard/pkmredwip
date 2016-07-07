@@ -14,6 +14,8 @@ public class Pokemon
   protected ArrayList<Move> learnableDataset; //All possible learnable moves
   protected Stats pokemonStats;
   protected Stats pokemonBaseStats;
+  protected double pokemonGenderRatio;
+  protected String pokemonGender;
   protected int pokemonMaximumLevel = 100;
   protected int pokemonMaximumMoves = 4;
   public static String[] types = {"Normal","Fire","Water","Electric","Grass","Ice","Fighting", "Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Grass/Poison","Fire/Flying","Bug/Flying","Bug/Poison","Normal/Flying","Poison/Ground","Poison/Flying","Water/Fighting","Water/Poison","Rock/Ground","Water/Psychic","Bug/Grass","Water/Ice","Ghost/Poison","Grass/Psychic","Bug/Flying","Ice/Psychic","Water/Flying","Rock/Water","Ice/Flying","Electric/Flying","Dragon/Flying"};
@@ -29,7 +31,8 @@ public class Pokemon
   }
   
   
-  public Pokemon(String name, double height, double weight, String desc, int idnum, String type, int currlevel,ArrayList<Move> set,ArrayList<Move> learnableSet, int currXP, Stats currstats, Stats basestats)
+  
+  public Pokemon(String name, double height, double weight, String desc, int idnum, String type, int currlevel,ArrayList<Move> set,ArrayList<Move> learnableSet, int currXP, Stats currstats, Stats basestats, double genderRatio, String gender)
   {
     pokemonName = name;
     pokemonHeight = height;
@@ -42,7 +45,9 @@ public class Pokemon
     learnableDataset = learnableSet;
     pokemonCurrentXP = currXP;
     pokemonStats = currstats;
+    pokemonGenderRatio = genderRatio;
     pokemonBaseStats = basestats;
+    pokemonGender = gender;
   }
   public static int getParticularTypeIndex(String n)
   {
@@ -58,6 +63,14 @@ public class Pokemon
   public static String getParticularType(String s)
   {
     return types[getParticularTypeIndex(s)];
+  }
+  public double getGenderRatio()
+  {
+	  return pokemonGenderRatio;
+  }
+  public String getGender()
+  {
+	  return pokemonGender;
   }
   public ArrayList<Move> getMoves()
   {
