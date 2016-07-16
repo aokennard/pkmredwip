@@ -502,8 +502,10 @@ public class Move
     Move t = Move.tackle(1);
     Move m = new Move("FireBlast",Pokemon.getParticularType("Fire"), 95, .1, 5, 10, "Physical");
     mB.add(t);
+
     //Bulbasaur b = new Bulbasaur(5,mB,Stats.getPokemonStat("Bulbasaur"),0);
     //System.out.print(determineTypeEfficiency(m,b));
+
   } 
     
 }

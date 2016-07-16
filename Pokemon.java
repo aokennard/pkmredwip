@@ -32,8 +32,8 @@ public class Pokemon
   }
   
   
-  
   public Pokemon(String name, double height, double weight, String desc, int idnum, String type, int currlevel,ArrayList<Move> set,ArrayList<Move> learnableSet, int currXP, Stats currstats, Stats basestats, double genderRatio, String gender, String debuff)
+
   {
     pokemonName = name;
     pokemonHeight = height;
