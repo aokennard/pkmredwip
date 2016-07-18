@@ -125,7 +125,7 @@ public class Stats
   {
     Bulbasaur bul = new Bulbasaur(5,Bulbasaur.bulbasaurMoves,new Stats(0,0,0,0,0),0,.875,"Male","",0);
     Stats bulbaS = pokemonStats(bul);
-    Bulbasaur bul2 = new Bulbasaur(5,Bulbasaur.bulbasaurMoves,bulbaS,0,.875,"Male","",0);
+    Bulbasaur bul2 = new Bulbasaur(bul.getLevel(),bul.getMoves(),bulbaS,bul.getCurrentXP(),bul.getGenderRatio(),bul.getGender(),bul.getDebuff(),bul.getEV());
     System.out.println(bulbaS.getHP());
     System.out.println(bulbaS.getAttack());
     System.out.println(bulbaS.getDefense());
