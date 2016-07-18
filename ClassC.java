@@ -95,8 +95,8 @@ public class ClassC
     return "import java.util.*; " + "public class " + name + " extends Pokemon { " +
   "protected static ArrayList<Move> "+name+"Moves = new ArrayList<Move>() {{" +
       movestring + "}};" + "public "+name+"()"+ " { super("+"\""+name+"\""+"); }"
-      + "public "+name+"(int level,ArrayList<Move> moveset,Stats "+name+"Stats,int xp, double genRatio, String gender) { " + 
-    "super("+"\""+name+"\""+","+height+", "+weight+", "+"\""+description+"\""+", "+pkmid+", Pokemon.getParticularType("+"\""+pkmtype+"\""+"), level, moveset,"+name+"Moves,xp,"+name+"Stats, Stats.getPokemonStat("+"\""+name+"\""+"), genRatio, gender);"+
+      + "public "+name+"(int level,ArrayList<Move> moveset,Stats "+name+"Stats,int xp, double genRatio, String gender, String debuff, int ev) { " + 
+    "super("+"\""+name+"\""+","+height+", "+weight+", "+"\""+description+"\""+", "+pkmid+", Pokemon.getParticularType("+"\""+pkmtype+"\""+"), level, moveset,"+name+"Moves,xp,"+name+"Stats, Stats.getPokemonStat("+"\""+name+"\""+"), genRatio, gender, debuff, ev);"+
     " } " + " public static void main(String [] args)" + " { } " + " } ";
   }
   public static void main(String [] args) throws Exception

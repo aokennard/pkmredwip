@@ -8,13 +8,14 @@ public class Pokemon
   protected String pokemonName;
   protected int pokemonIDNum;
   protected String pokemonType;
-  protected int pokemonCurrentLevel;
+  protected static int pokemonCurrentLevel;
   protected int pokemonCurrentXP;
   protected ArrayList<Move> pokemonMoves; //What moves a pokemon CURRENTLY has
   protected ArrayList<Move> learnableDataset; //All possible learnable moves
   protected Stats pokemonStats;
   protected Stats pokemonBaseStats;
   protected double pokemonGenderRatio;
+  protected int pokemonEV;
   protected String pokemonGender;
   protected int pokemonMaximumLevel = 100;
   protected int pokemonMaximumMoves = 4;
@@ -32,7 +33,7 @@ public class Pokemon
   }
   
   
-  public Pokemon(String name, double height, double weight, String desc, int idnum, String type, int currlevel,ArrayList<Move> set,ArrayList<Move> learnableSet, int currXP, Stats currstats, Stats basestats, double genderRatio, String gender, String debuff)
+  public Pokemon(String name, double height, double weight, String desc, int idnum, String type, int currlevel,ArrayList<Move> set,ArrayList<Move> learnableSet, int currXP, Stats currstats, Stats basestats, double genderRatio, String gender, String debuff, int EV)
 
   {
     pokemonName = name;
@@ -50,6 +51,7 @@ public class Pokemon
     pokemonBaseStats = basestats;
     pokemonGender = gender;
     pokemonDebuff = debuff;
+    pokemonEV = EV;
   }
   public static int getParticularTypeIndex(String n)
   {
@@ -62,9 +64,13 @@ public class Pokemon
     }
     return -1;
   }
-  public static String getDebuff()
+  public String getDebuff()
   {
     return pokemonDebuff;
+  }
+  public int getEV()
+  {
+    return pokemonEV;
   }
   public static String getParticularType(String s)
   {
@@ -106,7 +112,7 @@ public class Pokemon
   {
     return pokemonIDNum;
   }
-  public int getLevel()
+  public static int getLevel()
   {
     return pokemonCurrentLevel;
   }
